@@ -1,0 +1,15 @@
+CrystalOS
+===========
+
+Getting started
+---------------
+
+To get started with Android/CrystalOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+
+To initialize your local repository using the CrystalOS trees, use a command like this:
+```
+repo init -u git://github.com/CrystalOS-Project/manifest.git -b eleven
+```
+Then to sync up:
+```
+repo sync -c -j$(nproc --all) --no-tags --no-clone-bundle --optimized-fetch

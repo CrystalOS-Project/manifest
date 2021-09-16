@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="kdrag0n"
+		fetch="https://github.com/kdrag0n/"
+		revision="refs/heads/master"
+		sync-j="8" />
+<remote name="thankyoumario"
+		fetch="https://github.com/ThankYouMario"
+		revision="refs/heads/ruby-12"
+		sync-j="8" />
+
+<project path="prebuilts/clang/host/linux-x86/clang-proton" name="proton-clang" remote="kdrag0n" clone-depth="1" />
+<project path="prebuilts/clang/host/linux-x86/clang-sdllvm" name="proprietary_vendor_qcom_sdclang" remote="thankyoumario" clone-depth="1" />
+
+</manifest>

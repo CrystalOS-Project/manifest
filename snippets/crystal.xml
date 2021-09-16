@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<remote name="crystal"
+			fetch="https://github.com/CrystalOS-Project/"
+			revision="refs/heads/1.0-Amethyst"
+			sync-j="8" />
+
+<project path="art" name="art" groups="pdk" remote="crystal" />
+<project path="bionic" name="bionic" groups="pdk" remote="crystal" />
+<project path="build/make" name="build_make" groups="pdk" remote="crystal" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+</project>
+<project path="build/blueprint" name="build_blueprint" groups="pdk,tradefed"  remote="crystal" />
+<project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="crystal" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+</project>
+<project path="development" name="development" groups="developers,pdk-cw-fs,pdk-fs"  remote="crystal" />
+<project path="device/crystal/sepolicy" name="device_crystal_sepolicy"  remote="crystal" />
+<project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="Crystal_Legacy"  remote="crystal" />
+<project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="Crystal_Legacy_Um"  remote="crystal" />
+<project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy" groups="qcom,pdk-qcom"  revision="Crystal_Vndr" remote="crystal" />
+<project path="device/generic/goldfish" name="device_generic_goldfish" groups="pdk"  remote="crystal" />
+<project path="device/generic/goldfish-opengl" name="device_generic_goldfish-opengl" groups="pdk"  remote="crystal" />
+<project path="device/google/atv" name="device_google_atv" groups="device,broadcom_pdk,generic_fs,pdk"  remote="crystal" />
+<project path="external/boringssl" name="external_boringssl" groups="pdk"  remote="crystal" />
+<project path="external/cldr" name="external_cldr" groups="pdk"  remote="crystal" />
+<project path="external/e2fsprogs" name="external_e2fsprogs" groups="pdk"  remote="crystal" />
+<project path="external/gptfdisk" name="external_gptfdisk" groups="pdk"  remote="crystal" />
+<project path="external/guice" name="external_guice" groups="pdk"  remote="crystal" />
+<project path="external/icu" name="external_icu" groups="pdk"  remote="crystal" />
+<project path="external/libcxx" name="external_libcxx" groups="pdk"  remote="crystal" />
+<project path="external/mksh" name="external_mksh" groups="pdk"  remote="crystal" />
+<project path="external/perfetto" name="external_perfetto" groups="pdk"  remote="crystal" />
+<project path="external/tinyalsa" name="external_tinyalsa" groups="pdk"  remote="crystal" />
+<project path="external/tinycompress" name="external_tinycompress" groups="pdk"  remote="crystal" />
+<project path="external/toybox" name="external_toybox" groups="pdk"  remote="crystal" />
+<project path="frameworks/av" name="frameworks_av" groups="pdk" remote="crystal" />
+<project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="crystal" />
+<project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="crystal" />
+<project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk"  remote="crystal" />
+<project path="hardware/google/pixel" name="hardware_google_pixel" groups="generic_fs,pixel"  remote="crystal" />
+<project path="hardware/interfaces" name="hardware_interfaces" groups="pdk"  remote="crystal" />
+<project path="hardware/knowles/athletico/sound_trigger_hal" name="hardware_knowles_athletico_sound_trigger_hal" groups="coral,generic_fs"  remote="crystal" />
+<project path="hardware/libhardware" name="hardware_libhardware" groups="pdk"  remote="crystal" />
+<project path="hardware/nxp/nfc" name="hardware_nxp_nfc" groups="pdk"  remote="crystal" />
+<project path="hardware/ril" name="hardware_ril" groups="pdk"  remote="crystal" />
+<project path="packages/apps/Mine" name="packages_apps_Mine" remote="crystal" />
+<project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="crystal" />
+<project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="crystal" />
+<project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="crystal" />
+<project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs" remote="crystal" />
+<project path="packages/overlays/Crystal" name="packages_overlays_Crystal" remote="crystal" />
+<project path="packages/resources/devicesettings" name="packages_resources_devicesettings"  remote="crystal" />
+<project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="crystal" />
+<project path="prebuilts/tools-crystal" name="prebuilts_tools-crystal" clone-depth="1"  remote="crystal" />
+<project path="prebuilts/build-tools" name="prebuilts_build-tools" groups="pdk" clone-depth="1"  remote="crystal" />
+<!--<project path="system/core" name="system_core" groups="pdk" remote="crystal" />-->
+<project path="system/core" name="android_system_core" groups="pdk" remote="crystal" />
+<project path="system/incremental_delivery" name="system_incremental_delivery" groups="pdk" remote="crystal" />
+<project path="system/libufdt" name="system_libufdt" groups="pdk" remote="crystal" />
+<project path="system/media" name="system_media" groups="pdk" remote="crystal" />
+<project path="system/netd" name="system_netd" groups="pdk" remote="crystal" />
+<project path="system/tools/mkbootimg" name="system_tools_mkbootimg" groups="pdk" remote="crystal" />
+<project path="system/timezone" name="system_timezone" groups="pdk" remote="crystal" />
+<project path="system/update_engine" name="system_update_engine" groups="pdk" remote="crystal" />
+<project path="system/vold" name="system_vold" groups="pdk" remote="crystal" />
+<project path="tools/apksig" name="tools_apksig" groups="pdk,tradefed" remote="crystal" />
+<project path="tools/metalava" name="tools_metalava" groups="pdk,tools" remote="crystal" />
+<project path="vendor/support" name="vendor_support" remote="crystal" />
+<project path="vendor/crystal" name="vendor_crystal" remote="crystal" />
+</manifest>

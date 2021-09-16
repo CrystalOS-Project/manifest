@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<remote name="blissgitlab"
+			fetch="https://gitlab.com/BlissRoms/"
+			revision="refs/heads/r"
+			sync-j="8" />
+
+<project path="vendor/gapps" name="android_vendor_gapps" remote="blissgitlab" />
+
+</manifest>

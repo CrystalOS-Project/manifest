@@ -745,6 +745,5 @@
   <include name="snippets/crystal.xml" />
   <include name="snippets/bliss.xml" />
   <include name="snippets/useful_repos.xml" />
-  <include name="snippets/xtended.xml" />
 
 </manifest>
